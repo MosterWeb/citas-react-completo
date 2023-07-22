@@ -4,7 +4,8 @@ import List from "./components/List"
 
 
 function App() {
-// Mi nueva version editada
+// Este es mi proyectode practicas
+// Y resalta la claridad de mi proyecto
   return (
       <div className="container w-10/12 mx-auto mt-2 md:h-screen">
         <Header />
