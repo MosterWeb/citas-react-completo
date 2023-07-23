@@ -1,7 +1,9 @@
+/* eslint-disable react/prop-types */
 
-const Error = ({mensaje}) => {
+
+const Error = ({children}) => {
   return (
-    <div className="bg-red-600 mb-1 text-white text-center font-mediun"><p>{mensaje}</p></div>
+    <div className="bg-red-700 text-center text-white font-medium"><h2>{children}</h2></div>
   )
 }
 
