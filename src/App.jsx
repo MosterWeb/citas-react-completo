@@ -2,10 +2,16 @@ import Header from "./components/Header"
 import Form from "./components/Form"
 import List from "./components/List"
 import { useState } from "react"
+import { useEffect } from "react";
 
 
 function App() {
-  const [pacientes, setPacientes] = useState([]);
+  const pacientesLS = JSON.parse(localStorage.getItem("pacientes"))
+  const [pacientes, setPacientes] = useState(()=>pacientesLS);
+
+  useEffect(()=>{
+    localStorage.setItem("pacientes", JSON.stringify(pacientes));
+  },[pacientes]);
 
 
   return (
