@@ -1,5 +1,6 @@
+/* eslint-disable react/prop-types */
 import Paciente from "./Paciente"
-const List = ({pacientes, setPaciente, deletePatient}) => {
+const List = ({pacientes, setPaciente, eliminarPaciente}) => {
   return (
     <div className="md:w-3/5 lg:w-1/2">
       {
@@ -9,7 +10,10 @@ const List = ({pacientes, setPaciente, deletePatient}) => {
       <div className="px-2 py-2 md:h-screen md:overflow-y-scroll ">
         {
           pacientes.map(paciente=>{
-            return (<Paciente paciente={paciente} deletePatient= {deletePatient} setPaciente= {setPaciente} key={paciente.id}/>)
+            return (<Paciente
+              paciente={paciente} 
+              eliminarPaciente={eliminarPaciente}
+              setPaciente= {setPaciente} key={paciente.id}/>)
           })
         }
       </div></>
