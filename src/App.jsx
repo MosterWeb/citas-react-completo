@@ -4,15 +4,13 @@ import List from "./components/List"
 import { useState } from "react"
 import { useEffect } from "react";
 
-
 function App() {
-  const pacientesLS = JSON.parse(localStorage.getItem("pacientes"))
-  const [pacientes, setPacientes] = useState(()=>pacientesLS);
-
+  const pacientesLS =  JSON.parse(localStorage.getItem("pacientes"));
+  const [pacientes, setPacientes] = useState([]);
+  
   useEffect(()=>{
     localStorage.setItem("pacientes", JSON.stringify(pacientes));
-  },[pacientes]);
-
+  }, [pacientes]);
 
   return (
       <div className="container w-10/12 mx-auto mt-2 md:h-screen">
