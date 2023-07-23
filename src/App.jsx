@@ -3,7 +3,7 @@ import Form from "./components/Form"
 import List from "./components/List"
 import { useState } from "react"
 import { useEffect } from "react";
-
+// Este es comodin
 function App() {
   const pacientesLS =  JSON.parse(localStorage.getItem("pacientes"));
   const [pacientes, setPacientes] = useState([]);
